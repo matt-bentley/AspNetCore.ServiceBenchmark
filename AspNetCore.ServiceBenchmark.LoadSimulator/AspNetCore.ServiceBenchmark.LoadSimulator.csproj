@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-AspNetCore.ServiceBenchmark.LoadSimulator-4D38447B-B3EC-41FA-BD5A-A5FD18D3A88F</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetCore.ServiceBenchmark.TestClient\AspNetCore.ServiceBenchmark.TestClient.csproj" />
+  </ItemGroup>
+</Project>

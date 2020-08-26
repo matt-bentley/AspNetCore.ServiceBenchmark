@@ -4,10 +4,10 @@ using AspNetCore.ServiceBenchmark.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace AspNetCore.ServiceBenchmark.Rest._3._1.Controllers
+namespace AspNetCore.ServiceBenchmark.Rest._2._2.Controllers
 {
-    [ApiController]
     [Route("[controller]")]
+    [ApiController]
     public class DataController : ControllerBase
     {
         private readonly ILogger<DataController> _logger;

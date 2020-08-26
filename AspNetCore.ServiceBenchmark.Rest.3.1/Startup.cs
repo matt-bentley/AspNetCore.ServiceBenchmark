@@ -1,8 +1,10 @@
+using AspNetCore.ServiceBenchmark.Rest._3._1.Formatters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Utf8Json.Resolvers;
 
 namespace AspNetCore.ServiceBenchmark.Rest._3._1
 {
@@ -24,7 +26,17 @@ namespace AspNetCore.ServiceBenchmark.Rest._3._1
             }
             else
             {
-                services.AddControllers();
+                var mvcBuilder = services.AddControllers();
+                if (Configuration.GetValue<bool>("UseUtf8Json"))
+                {
+                    mvcBuilder.AddMvcOptions(option =>
+                    {
+                        option.OutputFormatters.Clear();
+                        option.OutputFormatters.Add(new Utf8JsonOutputFormatter(StandardResolver.CamelCase));
+                        option.InputFormatters.Clear();
+                        option.InputFormatters.Add(new Utf8JsonInputFormatter(StandardResolver.CamelCase));
+                    });
+                }
             }
         }
 

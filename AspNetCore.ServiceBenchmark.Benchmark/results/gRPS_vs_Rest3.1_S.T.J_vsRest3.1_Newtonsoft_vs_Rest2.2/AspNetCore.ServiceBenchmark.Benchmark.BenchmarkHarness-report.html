@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>AspNetCore.ServiceBenchmark.Benchmark.BenchmarkHarness-20200825-184308</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.18362.1016 (1903/May2019Update/19H1)
+Intel Core i7-8700 CPU 3.20GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical cores
+.NET Core SDK=3.1.401
+  [Host]     : .NET Core 3.1.7 (CoreCLR 4.700.20.36602, CoreFX 4.700.20.37001), X64 RyuJIT
+  DefaultJob : .NET Core 3.1.7 (CoreCLR 4.700.20.36602, CoreFX 4.700.20.37001), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                Method</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>GrpcGetSmallPayloadAsync</td><td>166.4 ms</td><td>1.77 ms</td><td>1.74 ms</td>
+</tr><tr><td>Rest2GetSmallPayloadAsync</td><td>216.1 ms</td><td>4.29 ms</td><td>7.40 ms</td>
+</tr><tr><td>Rest3GetSmallPayloadAsync</td><td>155.0 ms</td><td>2.87 ms</td><td>4.29 ms</td>
+</tr><tr><td>Rest3NewtonsoftGetSmallPayloadAsync</td><td>156.6 ms</td><td>2.09 ms</td><td>1.96 ms</td>
+</tr><tr><td>GrpcGetMediumPayloadAsync</td><td>109.8 ms</td><td>0.82 ms</td><td>0.73 ms</td>
+</tr><tr><td>Rest2GetMediumPayloadAsync</td><td>490.2 ms</td><td>1.24 ms</td><td>1.16 ms</td>
+</tr><tr><td>Rest3GetMediumPayloadAsync</td><td>410.6 ms</td><td>1.63 ms</td><td>1.45 ms</td>
+</tr><tr><td>Rest3NewtonsoftGetMediumPayloadAsync</td><td>1,389.0 ms</td><td>22.65 ms</td><td>17.68 ms</td>
+</tr><tr><td>GrpcGetLargePayloadAsync</td><td>106.8 ms</td><td>2.12 ms</td><td>3.94 ms</td>
+</tr><tr><td>Rest2GetLargePayloadAsync</td><td>452.4 ms</td><td>1.18 ms</td><td>1.04 ms</td>
+</tr><tr><td>Rest3GetLargePayloadAsync</td><td>383.3 ms</td><td>2.28 ms</td><td>2.02 ms</td>
+</tr><tr><td>Rest3NewtonsoftGetLargePayloadAsync</td><td>1,333.1 ms</td><td>25.22 ms</td><td>25.90 ms</td>
+</tr><tr><td>GrpcStreamLargePayloadAsync</td><td>651.9 ms</td><td>12.51 ms</td><td>13.38 ms</td>
+</tr><tr><td>Rest2StreamLargePayloadAsync</td><td>888.0 ms</td><td>6.24 ms</td><td>5.83 ms</td>
+</tr><tr><td>Rest3StreamLargePayloadAsync</td><td>736.8 ms</td><td>2.28 ms</td><td>1.90 ms</td>
+</tr><tr><td>Rest3NewtonsoftStreamLargePayloadAsync</td><td>2,781.9 ms</td><td>55.49 ms</td><td>117.05 ms</td>
+</tr></tbody></table>
+</body>
+</html>
