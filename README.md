@@ -28,14 +28,17 @@ Intel Core i7-8700 CPU 3.20GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical c
 |    Rest2.2NewtonsoftGetSmallPayloadAsync | 216.1 ms |  4.29 ms |  7.40 ms |
 |    **Rest3.1S.T.JGetSmallPayloadAsync** | **155.0 ms** |  **2.87 ms** |  **4.29 ms** |
 |    Rest3.1NewtonsoftGetSmallPayloadAsync | 156.6 ms |  2.09 ms |  1.96 ms |
+
 |    **GrpcGetMediumPayloadAsync** | **109.8 ms** |  **0.82 ms** |  **0.73 ms** |
 |   Rest2.2NewtonsoftGetMediumPayloadAsync | 490.2 ms |  1.24 ms |  1.16 ms |
 |   Rest3.1S.T.JGetMediumPayloadAsync | 410.6 ms |  1.63 ms |  1.45 ms |
 |   Rest3.1NewtonsoftGetMediumPayloadAsync | 1,389.0 ms | 22.65 ms | 17.68 ms |
+
 |     **GrpcGetLargePayloadAsync** | **106.8 ms** |  **2.12 ms** |  **3.94 ms** |
 |    Rest2.2NewtonsoftGetLargePayloadAsync | 452.4 ms |  1.18 ms |  1.04 ms |
 |    Rest3.1S.T.JGetLargePayloadAsync | 383.3 ms |  2.28 ms |  2.02 ms |
 |    Rest3.1NewtonsoftGetLargePayloadAsync | 1,333.1 ms | 25.22 ms | 25.90 ms |
+
 |  **GrpcStreamLargePayloadAsync** | **651.9 ms** | **12.51 ms** | **13.38 ms** |
 | Rest2.2NewtonsoftStreamLargePayloadAsync | 888.0 ms |  6.24 ms |  5.83 ms |
 | Rest3.1S.T.JStreamLargePayloadAsync | 736.8 ms |  2.28 ms |  1.90 ms |
